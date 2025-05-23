@@ -81,8 +81,7 @@ define(["lib/jquery", "lib/underscore", "text!templates/pattern.html", "ractive"
 		view.on("save-pattern", save_pattern);
 
 		// Save pattern
-        view.off("download-pattern")
-		view.on("download-pattern", download);
+		$('#download-pattern').off('click').on('click', download);
 	}
 
 	////////////////////////////////////////
@@ -402,6 +401,7 @@ define(["lib/jquery", "lib/underscore", "text!templates/pattern.html", "ractive"
      * Inspired by: http://techslides.com/save-svg-as-an-image/
      */
     var download = function(e) {
+		console.log("Download pattern", e);
         // Enable credits
         view.set("show_credits", true)
         var svg = document.querySelector("svg")
