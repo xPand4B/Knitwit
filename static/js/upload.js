@@ -49,7 +49,6 @@ define(["lib/jquery", "js/capture", "text!templates/upload.html", "ractive", "ra
         // view.on("upload-web-enable", upload_web_enable);
 		$('#upload-web-enable').on('click', upload_web_enable)
 
-
 		// For capturing image with webcam
 		// view.on("upload-web", upload_web);
 		$('#upload-web').on('click', upload_web)
